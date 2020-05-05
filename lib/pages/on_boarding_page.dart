@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:social_flutter_youtube/utils/clip_waves.dart';
 import 'package:social_flutter_youtube/utils/colors_style.dart';
 
 class OnBoardingPage extends StatelessWidget {
@@ -16,7 +17,9 @@ class OnBoardingPage extends StatelessWidget {
         ),
         Positioned.fill(
           top: 180,
-          child: Container(color: MyColors.bgPurpleColor),
+          child: ClipPath(
+              clipper: ClipWaves(),
+              child: Container(color: MyColors.bgPurpleColor)),
         ),
       ],
     ));

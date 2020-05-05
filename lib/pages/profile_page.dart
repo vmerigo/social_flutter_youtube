@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:social_flutter_youtube/utils/clip_waves.dart';
 import 'package:social_flutter_youtube/utils/colors_style.dart';
 
 class ProfilePage extends StatelessWidget {
@@ -15,16 +16,17 @@ class ProfilePage extends StatelessWidget {
           ),
         ),
         Positioned.fill(
-          top:340,
-          child: Container(
-            color:MyColors.bgSoftPinkColor
+          top: 340,
+          child: ClipPath(
+            clipper: ClipWaves(),
+            child: Container(color: MyColors.bgSoftPinkColor),
           ),
         ),
         Positioned.fill(
-          top:450,
-          child: Container(
-           color:MyColors.bgWhiteColor
-          ),
+          top: 450,
+          child: ClipPath(
+              clipper: ClipWaves(),
+              child: Container(color: MyColors.bgWhiteColor)),
         ),
       ],
     ));

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:social_flutter_youtube/utils/clip_waves.dart';
 import 'package:social_flutter_youtube/utils/colors_style.dart';
 
 class ChatPage extends StatelessWidget {
@@ -15,9 +16,12 @@ class ChatPage extends StatelessWidget {
             ),
           ),
           Positioned.fill(
-            top:120,
-            child: Container(
-             color: MyColors.bgSoftPinkColor,
+            top: 120,
+            child: ClipPath(
+              clipper: ClipWaves(),
+              child: Container(
+                color: MyColors.bgSoftPinkColor,
+              ),
             ),
           ),
         ],
